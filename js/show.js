@@ -18,8 +18,8 @@ fetchMovie = id => {
 handleFetch = res => {
     if(res['Response'] == "True") {
         let sMovie = ShowMovie.fromJson(res);
-        console.log(sMovie);
         let resultContainer = document.getElementById('result-container-show');
+        resultContainer.innerHTML = '';
         resultContainer.innerHTML = `
         <div class="wrapper bg-white">
             <div id="left-container" class="left">
@@ -47,7 +47,6 @@ handleFetch = res => {
                     <h3>Writers</h3>
                     <p>${sMovie.writers}</p>
                 </div>
-            </div>
         </div>
         <div class="right">
                 <img class="movie-poster"
@@ -89,9 +88,9 @@ handleError = message => {
 }
 
 addLoader = () => {
-    let loader = `<div></div>
+    let loader = `<div class="center-div">
                     <div class="loader" style="margin: auto"></div>
-                <div></div>`;
+                <div>`;
     let resultContainer = document.getElementById("result-container-show");
     resultContainer.innerHTML = loader;
 }

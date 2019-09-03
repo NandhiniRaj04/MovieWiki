@@ -18,26 +18,10 @@ class ShowMovie {
 
     toTag() {
         let spans = [];
-        console.log("ssd");
         return this.genre.map(g => `<span class="genre-badge">${g}</span>`).join("");
     }
 
     static fromJson(res) {
-        console.log(res['Title'],
-            res['Rated'],
-            res['Language'],
-            res['Poster'],
-            res['imdbRating'],
-            res['Plot'],
-            res['Director'],
-            res['Actors'],
-            res['Writer'],
-            res['Runtime'],
-            res['Released'],
-            res['BoxOffice'],
-            res['Production'],
-            res['Genre'].split(","),
-        );
         return new ShowMovie(
             res['Title'],
             res['Rated'],
