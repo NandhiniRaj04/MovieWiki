@@ -1,2 +1,3 @@
 # MovieWiki
-Frontend Assignment ( Freshworks SE )
+
+Freshworks Assignment SE
